@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta name="twitter:site" content="@mmzk_trpg" />
+  <meta name="twitter:title" content="穴埋め" />
+  <meta name="twitter:description" content="埋めしたい部分を[]で囲んだ後に「変換するぽよ」ボタンを押してね。自分の好きな記号で埋めたい場合は「埋めるのに使いたい記号」に好きな記号を入力してね。デフォルトは●で埋められるよ。" />
+  <meta name="twitter:image" content="https://2.bp.blogspot.com/-6SDMnvkCOso/VOsKC8xsYcI/AAAAAAAArxc/PzmnvnDAdDs/s800/sushi_kaitenzushi.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <title>TRPGのいろいろ</title>
+  <script type="text/javascript" src="convert.js"></script>
+</head>
+
+<body>
+  <p>
+    穴埋めしたい部分を[]で囲んだ後に「変換するぽよ」ボタンを押してね。<br>
+    自分の好きな記号で埋めたい場合は「埋めるのに使いたい記号」に好きな記号を入力してね。<br>
+    デフォルトは●で埋められるよ。
+  </p>
+  <table border="0">
+    <tr>
+      <td>
+        使いたい文章:
+      </td>
+      <td>
+        <textarea id="original_text" rows="10" cols="60"></textarea>
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+      </td>
+      <td>
+        <input type="button" value="[]を追加" onclick="addBrackets();">
+        <input type="button" value="[]を全削除" onclick="clearBrackets();">
+      </td>
+
+    <tr>
+      <td>
+        埋めるのに使いたい記号:
+      </td>
+      <td>
+        <input id="symbol" type="text">
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+      </td>
+      <td>
+        <input type="button" value="変換するぽよ" onclick="convert();">
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        変換後:
+      </td>
+      <td>
+        <textarea readonly id="converted_text" rows="10" cols="60" style="resize:none;"></textarea>
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+      </td>
+      <td>
+        <input id="copy" type="button" value="クリップボードにコピー" onclick="copy_to_clipboard();">
+      </td>
+    </tr>
+
+  </table>
+</body>
+
+</html>
